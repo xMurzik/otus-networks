@@ -2,42 +2,25 @@
 <lab name="lab03" version="1" scripttimeout="300" lock="0">
   <topology>
     <nodes>
-      <node id="1" name="PC-A" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop.png" config="0" left="123" top="237">
-        <interface id="0" name="eth0" type="ethernet" network_id="1"/>
-      </node>
-      <node id="2" name="PC-B" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop.png" config="0" left="648" top="267">
-        <interface id="0" name="eth0" type="ethernet" network_id="3"/>
-      </node>
-      <node id="3" name="S1" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m-15.2-2017032" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="1ddba5e5-fff0-46d4-9b1d-ec681c64906a" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Switch.png" config="0" left="276" top="255">
-        <interface id="2" name="Gi0/2" type="ethernet" network_id="2"/>
-        <interface id="3" name="Gi0/3" type="ethernet" network_id="1"/>
-      </node>
-      <node id="4" name="R1" type="qemu" template="vios" image="vios-15.5.3M" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="4" uuid="d8bf73ee-e097-47b3-91a7-302d1b4aa803" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Router.png" config="0" left="480" top="258">
-        <interface id="0" name="Gi0/0" type="ethernet" network_id="3"/>
-        <interface id="1" name="Gi0/1" type="ethernet" network_id="2"/>
-      </node>
-      <node id="5" name="VPC" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop.png" config="0" left="114" top="522">
-        <interface id="0" name="eth0" type="ethernet" network_id="6"/>
-      </node>
-      <node id="6" name="VPC" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop.png" config="0" left="666" top="534">
-        <interface id="0" name="eth0" type="ethernet" network_id="4"/>
-      </node>
       <node id="7" name="S2" type="iol" template="iol" image="L2-ADVENTERPRISE-M-15.1-20140814.bin" ethernet="1" nvram="1024" ram="1024" serial="0" console="" delay="0" icon="Switch.png" config="0" left="282" top="528">
-        <interface id="0" name="e0/0" type="ethernet" network_id="6"/>
-        <interface id="16" name="e0/1" type="ethernet" network_id="5"/>
-      </node>
-      <node id="8" name="R2" type="iol" template="iol" image="L3-ADVENTERPRISE9-15.5.2T.bin" ethernet="2" nvram="1024" ram="1024" serial="0" console="" delay="0" icon="Router.png" config="0" left="483" top="531">
         <interface id="0" name="e0/0" type="ethernet" network_id="4"/>
         <interface id="16" name="e0/1" type="ethernet" network_id="5"/>
       </node>
+      <node id="8" name="R2" type="iol" template="iol" image="L3-ADVENTERPRISE9-15.5.2T.bin" ethernet="2" nvram="1024" ram="1024" serial="0" console="" delay="0" icon="Router.png" config="0" left="483" top="531">
+        <interface id="16" name="e0/1" type="ethernet" network_id="5"/>
+        <interface id="32" name="e0/2" type="ethernet" network_id="7"/>
+      </node>
+      <node id="9" name="PC-B" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="560e285a-9a35-44db-998c-39529a5d53d1" firstmac="00:50:00:00:09:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.6.2" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vanalytic.png" config="0" left="648" top="546">
+        <interface id="0" name="e0" type="ethernet" network_id="7"/>
+      </node>
+      <node id="5" name="PC-A" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="00ac4aa6-d275-480d-900d-fc808b98639c" firstmac="00:50:00:00:05:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vanalytic.png" config="0" left="129" top="519">
+        <interface id="0" name="e0" type="ethernet" network_id="4"/>
+      </node>
     </nodes>
     <networks>
-      <network id="1" type="bridge" name="Net-PC-Aiface_0" left="285" top="324" visibility="0"/>
-      <network id="2" type="bridge" name="Net-S1iface_2" left="429" top="334" visibility="0"/>
-      <network id="3" type="bridge" name="Net-R1iface_0" left="603" top="331" visibility="0"/>
-      <network id="4" type="bridge" name="Net-R8iface_0" left="543" top="571" visibility="0"/>
       <network id="5" type="bridge" name="Net-R8iface_16" left="543" top="571" visibility="0"/>
-      <network id="6" type="bridge" name="Net-R7iface_0" left="342" top="568" visibility="0"/>
+      <network id="7" type="bridge" name="Net-Linuxiface_0" left="708" top="586" visibility="0"/>
+      <network id="4" type="bridge" name="Net-Linuxiface_0" left="230" top="615" visibility="0"/>
     </networks>
   </topology>
 </lab>
