@@ -7,11 +7,11 @@
         <interface id="16" name="e0/1" type="ethernet" network_id="5"/>
       </node>
       <node id="8" name="R2" type="iol" template="iol" image="L3-ADVENTERPRISE9-15.5.2T.bin" ethernet="2" nvram="1024" ram="1024" serial="0" console="" delay="0" icon="Router.png" config="0" left="483" top="531">
+        <interface id="0" name="e0/0" type="ethernet" network_id="1"/>
         <interface id="16" name="e0/1" type="ethernet" network_id="5"/>
-        <interface id="32" name="e0/2" type="ethernet" network_id="7"/>
       </node>
-      <node id="9" name="PC-B" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="560e285a-9a35-44db-998c-39529a5d53d1" firstmac="00:50:00:00:09:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.6.2" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vanalytic.png" config="0" left="648" top="546">
-        <interface id="0" name="e0" type="ethernet" network_id="7"/>
+      <node id="9" name="PC-B" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="560e285a-9a35-44db-998c-39529a5d53d1" firstmac="00:50:00:00:09:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.6.2" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vanalytic.png" config="0" left="654" top="531">
+        <interface id="0" name="e0" type="ethernet" network_id="1"/>
       </node>
       <node id="5" name="PC-A" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="00ac4aa6-d275-480d-900d-fc808b98639c" firstmac="00:50:00:00:05:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vanalytic.png" config="0" left="129" top="519">
         <interface id="0" name="e0" type="ethernet" network_id="4"/>
@@ -19,8 +19,8 @@
     </nodes>
     <networks>
       <network id="5" type="bridge" name="Net-R8iface_16" left="543" top="571" visibility="0"/>
-      <network id="7" type="bridge" name="Net-Linuxiface_0" left="708" top="586" visibility="0"/>
       <network id="4" type="bridge" name="Net-Linuxiface_0" left="230" top="615" visibility="0"/>
+      <network id="1" type="bridge" name="Net-PC-Biface_0" left="726" top="583" visibility="0"/>
     </networks>
   </topology>
 </lab>
