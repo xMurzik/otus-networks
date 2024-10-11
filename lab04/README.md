@@ -46,4 +46,18 @@
 		<td>255.255.255.0</td>
 		<td>192.168.1.1</td>
     </tr>
+	<tr>
+        <td>PC-A</td>
+        <td>NIC</td>
+		<td>2001:db8:acad:1::3</td>
+		<td>SLACC</td>
+		<td>64</td>
+    </tr>
+	<tr>
+        <td>PC-B</td>
+        <td>NIC</td>
+		<td>2001:db8:acad:a::3</td>
+		<td>SLACC</td>
+		<td>64</td>
+    </tr>
 </table>
