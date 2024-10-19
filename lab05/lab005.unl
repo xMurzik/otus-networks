@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="lab005" version="1" scripttimeout="300" lock="0">
+  <topology>
+    <nodes>
+      <node id="1" name="R1" type="iol" template="iol" image="L3-ADVENTERPRISE9-15.5.2T.bin" ethernet="1" nvram="1024" ram="1024" serial="0" console="" delay="0" icon="Router.png" config="0" left="387" top="372">
+        <interface id="16" name="e0/1" type="ethernet" network_id="1"/>
+      </node>
+      <node id="4" name="PC-A" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="7d754593-6021-444c-8bfa-f60ecb4718ad" firstmac="00:50:00:00:04:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vdirector.png" config="0" left="555" top="525">
+        <interface id="0" name="e0" type="ethernet" network_id="2"/>
+      </node>
+      <node id="5" name="PC-B" type="qemu" template="linux" image="linux-debian" console="vnc" cpu="2" cpulimit="0" ram="4096" ethernet="1" uuid="5805f1b7-bb1a-40b5-b419-730c1800cb70" firstmac="00:50:00:00:05:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="vdirector.png" config="0" left="750" top="522">
+        <interface id="0" name="e0" type="ethernet" network_id="4"/>
+      </node>
+      <node id="2" name="S1" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m.cml.SSA.high_iron_20180510" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="3eb3c953-cd8f-4c58-95b4-e6d4badfd181" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Switch.png" config="0" left="546" top="375">
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="3"/>
+        <interface id="4" name="Gi1/0" type="ethernet" network_id="1"/>
+        <interface id="5" name="Gi1/1" type="ethernet" network_id="2"/>
+      </node>
+      <node id="3" name="S2" type="qemu" template="viosl2" image="viosl2-adventerprisek9-m.cml.SSA.high_iron_20180510" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="ec9a814d-480e-42c2-9181-5084a137854b" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Switch.png" config="0" left="738" top="375">
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="3"/>
+        <interface id="7" name="Gi1/3" type="ethernet" network_id="4"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="Net-R1iface_16" left="447" top="406" visibility="0"/>
+      <network id="2" type="bridge" name="Net-Switchiface_5" left="606" top="415" visibility="0"/>
+      <network id="3" type="bridge" name="Net-Switchiface_1" left="606" top="415" visibility="0"/>
+      <network id="4" type="bridge" name="Net-Switchiface_7" left="787" top="432" visibility="0"/>
+    </networks>
+  </topology>
+</lab>
