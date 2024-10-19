@@ -21,48 +21,15 @@
 <tr>
 <td>Устройство</td>
 <td>Интерфейс</td>
-<td>ipv6-адрес</td>
-<td>Link-local ipv6-адрес</td>
-<td>Длина префикса</td>
+<td>IP-адрес</td>
+<td>Маска подсети</td>
 <td>Шлюз по умолчанию</td>
 </tr>
- <tr>
-        <td rowspan="2">R1</td>
-        <td>G0/0</td>
-		<td>2001:db8:acad:a::1</td>
-		<td>fe80::1</td>
-		<td>64</td>
-		<td>-</td>
-    </tr>
 	<tr>
-        <td>G0/1</td>
-        <td>2001:db8:acad:1::1 </td>
-		<td>fe80::1</td>
-		<td>64</td>
-		<td>-</td>
-    </tr>
-		<tr>
-        <td>S1</td>
-        <td>VLAN 1</td>
-		<td>2001:db8:acad:1::b</td>
-		<td>fe80::b</td>
-		<td>64</td>
-		<td>-</td>
-    </tr>
-	<tr>
-        <td>PC-A</td>
-        <td>NIC</td>
-		<td>2001:db8:acad:1::3</td>
-		<td>SLACC</td>
-		<td>64</td>
-		<td>fe80::1</td>
-    </tr>
-	<tr>
-        <td>PC-B</td>
-        <td>NIC</td>
-		<td>2001:db8:acad:a::3</td>
-		<td>SLACC</td>
-		<td>64</td>
-		<td>fe80::1</td>
-    </tr>
+        <td rowspan="4">R1</td>
+        <td>E0/1.10</td>
+	  <td>192.168.10.1</td>
+	  <td>255.255.255.0</td>
+	  <td rowspan="4">-</td>
+	</tr>
 </table>
