@@ -86,3 +86,41 @@
 </tr>
 
 </table>
+
+
+### Таблица VLAN:
+
+
+<table>
+
+<tr>
+	<td>VLAN</td>
+	<td>Иия</td>
+	<td>Назначенный интерфейс</td>
+</tr>
+
+<tr>
+	<td>10</td>
+	<td>managment</td>
+	<td>S1: VLAN 10</br>S2: VLAN 10</td>
+</tr>
+
+<tr>
+      <td>20</td>
+	<td>sales</td>
+	<td>S1: g1/1</td>
+</tr>
+
+<tr>
+	<td>30</td>
+	<td>operations</td>
+	<td>S2: g1/3</td>
+</tr>
+
+<tr>
+	<td>999</td>
+	<td>parking_lot</td>
+	<td>S1: g0/0-3, g1/2-3</br>S2: g0/0-3, g1/0-2</td>
+</tr>
+
+</table>
