@@ -65,6 +65,12 @@
 </tr>
 
 <tr>
+        <td>G0/0/1</td>
+	  <td>-</td>
+	  <td>-</td>
+</tr>
+
+<tr>
         <td>S1</td>
         <td>VLAN 200</td>
 	  <td></td>
