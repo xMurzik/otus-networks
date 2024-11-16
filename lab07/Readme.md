@@ -103,3 +103,46 @@
 </tr>
 
 </table>
+
+
+### Таблица VLAN:
+
+<table>
+
+<tr>
+	<td>VLAN</td>
+	<td>Иия</td>
+	<td>Назначенный интерфейс</td>
+</tr>
+
+<tr>
+	<td>1</td>
+	<td>no</td>
+	<td>S2: F0/18</td>
+</tr>
+
+<tr>
+      <td>100</td>
+	<td>clients</td>
+	<td>S1: F0/6</td>
+</tr>
+
+<tr>
+	<td>200</td>
+	<td>managment</td>
+	<td>S1: VLAN 200</td>
+</tr>
+
+<tr>
+	<td>999</td>
+	<td>parking_lot</td>
+	<td>S1: F0/1-4, F0/7-24, G0/1-2</td>
+</tr>
+
+<tr>
+	<td>1000</td>
+	<td>Native</td>
+	<td>-</td>
+</tr>
+
+</table>
