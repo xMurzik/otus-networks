@@ -47,4 +47,41 @@
 
 
 
+
+
+
+<tr>
+        <td rowspan="4">R1</td>
+        <td rowspan="2">E0/0</td>
+	 <td>2001:db8:acad:2::2/64</td>
+</tr>
+
+<tr>
+	 <td>fe80::2</td>
+</tr>
+
+<tr>
+        <td rowspan="2">E0/1</td>
+	 <td>2001:db8:acad:3::1/64</td>
+</tr>
+
+<tr>
+	 <td>fe80::1</td>
+</tr>
+
+<tr>
+        <td>PC-A</td>
+        <td>NIC</td>
+	 <td>DHCP</td>
+</tr>
+
+<tr>
+        <td>PC-B</td>
+        <td>NIC</td>
+	 <td>DHCP</td>
+</tr>
+
+
+
+
 </table>
