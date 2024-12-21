@@ -20,14 +20,14 @@
 
 <tr>
 	<td>Устройство</td>
-	<td>interface/vlan</td>
+	<td>Interface</td>
 	<td>IP-адрес</td>
 	<td>Маска подсети</td>
 	<td>Шлюз по умолчанию</td>
 </tr>
 
 <tr>
-        <td rowspan="6">R1</td>
+        <td rowspan="5">R1</td>
         <td>E0/1</td>
 	  <td>-</td>
 	  <td>-</td>
